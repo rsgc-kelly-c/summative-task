@@ -10,9 +10,8 @@ This game would be great for biology class due to the fact that this is a very r
 ## Sub-goals
 
 * extend Motion class (that we developed earlier together) to allow for force accumulation (wind, gravity, other forces)
-* make the mouse movement translate to a wind force
-* make it so that moving the mouse causes the "seeds" of the dandelion to disperse
-* modify the visual representation of the Motion class to more closely resembly dandelion seeds
-* identify an Arduino sensor that might work to detect air pressure / volume
-* program sensor to send values to Processing sketch
-* translate sensor output to wind force in sketch
+* make the arrow keys translate to movement
+* make it so movement is faster and slower in some areas
+* modify colour so that every second you begin to slightly fade
+* have the final destination (other bacteria) and once you connect with that destination, the simulation ends
+
