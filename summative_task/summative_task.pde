@@ -1,4 +1,5 @@
 yBacteria user = new yBacteria();
+LifeBar life = new LifeBar();
 void setup() {
 
   // Create a white background
@@ -15,12 +16,14 @@ void draw() {
 
   user.display();
   user.update();
+  life.display();
+  life.update();
 }
 
 void keyPressed() {
   
   if (key == CODED) {
-    
+
     if (keyCode == RIGHT) {
       user.RightKey();
       println("going right");

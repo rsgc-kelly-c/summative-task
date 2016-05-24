@@ -1,0 +1,1 @@
+// The y bacteria must get to the x bacteria or else it will die that is the way symbiotic organisms work.

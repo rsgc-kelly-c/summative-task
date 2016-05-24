@@ -33,7 +33,7 @@ class yBacteria {
   void display() {
 
     stroke(0);    // black border
-    fill(255);    // light gray fill
+    fill(200);    // light gray fill
 
     // draw the mover
     ellipse(location.x, location.y, 16, 16);
@@ -61,5 +61,6 @@ class yBacteria {
  void DownKey(){
    location.y += x;
  }
+ 
 }
   
