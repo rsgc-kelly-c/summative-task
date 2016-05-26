@@ -18,8 +18,7 @@ class LifeBar {
     if (dimensionx>0) {
       if (countdown>0){
         moving();
-        countdown--;
-        print(dimensionx);}
+        countdown--;}
       else {
         dimensionx -= factor;
         countdown = 60;

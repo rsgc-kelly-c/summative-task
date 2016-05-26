@@ -2,11 +2,10 @@ class yBacteria {
 
   RVector velocity;
   RVector location;
-  float x = 2;
   // constructor
   yBacteria(){
     location = new RVector(15,15);
-    velocity = new RVector(0.01,0.01);
+    velocity = new RVector(2,2);
     
   }
   
@@ -47,19 +46,19 @@ class yBacteria {
 
 //move right when you press the right arrow key
  void RightKey(){
-   location.x += x;
+   location.x += velocity.x;
  }
  // move left when you hit the left arrow key
  void LeftKey(){
-   location.x -= x;
+   location.x -= velocity.x;
  }
  // move up when you hit the up arrow key
  void UpKey(){
-   location.y -= x;
+   location.y -= velocity.y;
  }
  // move down when you hit the down arrow key
  void DownKey(){
-   location.y += x;
+   location.y += velocity.y;
  }
  
 }
