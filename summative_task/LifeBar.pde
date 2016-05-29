@@ -14,8 +14,10 @@ class LifeBar {
 
   void update() {
 
-   
+   //if the size of the health bar is not 0 make it smaller
     if (dimensionx>0) {
+      //countdown is 60 because processing runs at 60 frames persecond therefore
+      //the healthbar updates every second.
       if (countdown>0){
         moving();
         countdown--;}
@@ -24,6 +26,7 @@ class LifeBar {
         countdown = 60;
       }
     } else {
+      // If the healthbar is 0 clear eveything and make the end title show.
       clear();
       background(51);
       textSize(30);
