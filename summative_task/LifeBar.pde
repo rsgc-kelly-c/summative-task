@@ -1,13 +1,15 @@
 //This Bar decreases over time
 //Once this bar hits 0, the game is over
 class LifeBar {
-  RVector location = new RVector (500, 20);
-  int dimensionx = 100;
-  int countdown;
-  int factor = 2;
+  RVector location = new RVector (300, 20);
+  int dimensionx = 300;
+
+  float factor = 0.0;
 
   LifeBar() {
-    countdown = 60;
+
+    factor = 1/10000.0;
+    print(factor);
   }
 
   // As this simulation updates the life bar decreases
@@ -16,15 +18,8 @@ class LifeBar {
 
    //if the size of the health bar is not 0 make it smaller
     if (dimensionx>0) {
-      //countdown is 60 because processing runs at 60 frames persecond therefore
-      //the healthbar updates every second.
-      if (countdown>0){
-        moving();
-        countdown--;}
-      else {
-        dimensionx -= factor;
-        countdown = 60;
-      }
+
+       dimensionx -= factor;
     } else {
       // If the healthbar is 0 clear eveything and make the end title show.
       clear();
