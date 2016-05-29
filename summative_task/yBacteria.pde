@@ -52,25 +52,16 @@ class yBacteria {
 
   // wrap around edges
   void checkEdges() {
+         // make it so you can't go off the map.
+     if(location.x<0){
+       location.x = 640;}
+     else if (location.x>640){
+       location.x = 0;}
+     else if (location.y>360){
+       location.y = 0;}
+     else if (location.y<0){
+       location.y = 360;}
     
   }
-
-////move right when you press the right arrow key
-// void RightKey(){
-//   location.x += velocity.x;
-// }
-// // move left when you hit the left arrow key
-// void LeftKey(){
-//   location.x -= velocity.x;
-// }
-// // move up when you hit the up arrow key
-// void UpKey(){
-//   location.y -= velocity.y;
-// }
-// // move down when you hit the down arrow key
-// void DownKey(){
-//   location.y += velocity.y;
-// }
- 
 }
   

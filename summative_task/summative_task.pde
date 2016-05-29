@@ -21,6 +21,7 @@ void draw() {
 
     follower.display();
     user.update();
+    user.checkEdges();
     user.display();
     life.display();
     life.update();
