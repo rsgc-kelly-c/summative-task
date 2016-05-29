@@ -64,7 +64,7 @@ class xBacteria {
   
   void caught(LifeBar z) {
   location = new RVector( 10+random(600) , 10+random(300)  ); // making it's location random.
-  z.dimensionx += 200;
+  z.dimensionx += 150;
   
   }
  

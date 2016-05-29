@@ -3,6 +3,7 @@ LifeBar life = new LifeBar();
 xBacteria follower = new xBacteria();
 Title title = new Title();
 Boolean titleScreen = true;
+zBacteria chaser = new zBacteria();
 
 void setup() {
 
@@ -21,10 +22,16 @@ void draw() {
     follower.update();
     follower.display();
     follower.checkEdges();
+    
     user.update();
     user.checkEdges();
     user.collide(follower, life);
     user.display();
+    
+    chaser.display();
+    chaser.update(user);
+    chaser.checkEdges();
+    
     life.display();
     life.update();
   }

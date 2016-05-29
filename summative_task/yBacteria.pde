@@ -73,4 +73,14 @@ class yBacteria {
     if (distance<minDistance)
       n.caught(z);
   }
+  
+  void collideEnemy(){
+    float dx = location.x - n.location.x;
+    float dy = location.y - n.location.y;
+    float distance = sqrt(dx*dx +dy*dy);
+    float minDistance = radius + n.radius;
+    if (distance<minDistance)
+      n.caught(z);
+  }
+  
 }
