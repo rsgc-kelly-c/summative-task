@@ -18,10 +18,12 @@ void draw() {
   } else {
     // Clear the background
     background(222, 215, 120);
-
+    follower.update();
     follower.display();
+    follower.checkEdges();
     user.update();
     user.checkEdges();
+    user.collide(follower, life);
     user.display();
     life.display();
     life.update();
