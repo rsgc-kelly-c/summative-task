@@ -20,8 +20,8 @@ void draw() {
     background(222, 215, 120);
 
     follower.display();
-    user.display();
     user.update();
+    user.display();
     life.display();
     life.update();
   }
@@ -32,17 +32,26 @@ void keyPressed() {
   if (key == CODED) {
 
     if (keyCode == RIGHT) {
-      user.RightKey();
-      println("going right");
+      user.RightKey = true;
+      user.LeftKey = false;
+      user.UpKey = false;
+      user.DownKey = false; 
+
     } else if (keyCode == LEFT) {
-      user.LeftKey();
-      println("going left");
+      user.RightKey = false;
+      user.LeftKey = true;
+      user.UpKey = false;
+      user.DownKey = false; 
     } else if (keyCode == UP) {
-      user.UpKey();
-      println("going up");
+      user.RightKey = false;
+      user.LeftKey = false;
+      user.UpKey = true;
+      user.DownKey = false; 
     } else if (keyCode == DOWN) {
-      user.DownKey();
-      println("going down");
+      user.RightKey = false;
+      user.LeftKey = false;
+      user.UpKey = false;
+      user.DownKey = true; 
     }
   }
   
