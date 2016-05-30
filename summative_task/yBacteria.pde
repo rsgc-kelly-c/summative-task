@@ -72,15 +72,15 @@ class yBacteria {
     float dy = location.y - n.location.y;
     float distance = sqrt(dx*dx +dy*dy);
     float minDistance = radius + n.radius;
-    if (distance<minDistance){
+    if (distance<minDistance) {
       n.caught(z);
-    eCollide = true;
-    size += 10;}
-    else
-    eCollide = false;
+      eCollide = true;
+      size += 10;
+    } else
+      eCollide = false;
   }
-  
-  void collideEnemy(zBacteria n, LifeBar z){
+
+  void collideEnemy(zBacteria n, LifeBar z) {
     radius = size/2;
     float dx = location.x - n.location.x;
     float dy = location.y - n.location.y;
@@ -89,5 +89,4 @@ class yBacteria {
     if (distance<minDistance)
       n.caught(z);
   }
-  
 }

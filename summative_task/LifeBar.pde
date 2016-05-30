@@ -15,11 +15,10 @@ class LifeBar {
   // As this simulation updates the life bar decreases
 
   void update() {
-
-   //if the size of the health bar is not 0 make it smaller
+    text("LIFE", 400, 14);
+    //if the size of the health bar is not 0 make it smaller
     if (dimensionx>0) {
-
-       dimensionx -= factor;
+      dimensionx -= factor;
     } else {
       // If the healthbar is 0 clear eveything and make the end title show.
       clear();
