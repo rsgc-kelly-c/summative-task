@@ -49,7 +49,14 @@ class zBacteria {
 
 
 
-
+void caught(LifeBar z) {
+  location = new RVector( 10+random(600) , 10+random(300)  ); // making it's location random.
+  z.dimensionx -= 20;
+  zBacteria span = new zBacteria();
+  span.location = new RVector( 10+random(600) , 10+random(300)  );
+  
+  }
+ 
 
 
 

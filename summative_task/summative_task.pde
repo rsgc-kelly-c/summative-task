@@ -4,6 +4,8 @@ xBacteria follower = new xBacteria();
 Title title = new Title();
 Boolean titleScreen = true;
 zBacteria chaser = new zBacteria();
+zBacteria[] span;
+int count = 0;
 
 void setup() {
 
@@ -26,7 +28,22 @@ void draw() {
     user.update();
     user.checkEdges();
     user.collide(follower, life);
+    user.collideEnemy(chaser, life);
     user.display();
+    
+    if(user.eCollide == true)
+       count += 1;
+       
+       
+    while(count!=0){
+      if(span[count-1] == null)
+    span[count-1] = new zBacteria();
+    print(span[count]);
+    span[count-1].display();
+    span[count-1].update(user);
+    span[count-1].checkEdges();
+    count--;
+    }
     
     chaser.display();
     chaser.update(user);

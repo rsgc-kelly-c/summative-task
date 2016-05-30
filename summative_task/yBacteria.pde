@@ -6,8 +6,9 @@ class yBacteria {
   boolean LeftKey;
   boolean UpKey;
   boolean DownKey;
+  boolean eCollide;
   float size = 16;
-  float radius = size/2;
+  float radius; 
   // constructor
   yBacteria() {
     location = new RVector(15, 15);
@@ -66,15 +67,21 @@ class yBacteria {
   }
   //check if the two balls are colliding
   void collide(xBacteria n, LifeBar z) {
+    radius = size/2;
     float dx = location.x - n.location.x;
     float dy = location.y - n.location.y;
     float distance = sqrt(dx*dx +dy*dy);
     float minDistance = radius + n.radius;
-    if (distance<minDistance)
+    if (distance<minDistance){
       n.caught(z);
+    eCollide = true;
+    size += 10;}
+    else
+    eCollide = false;
   }
   
-  void collideEnemy(){
+  void collideEnemy(zBacteria n, LifeBar z){
+    radius = size/2;
     float dx = location.x - n.location.x;
     float dy = location.y - n.location.y;
     float distance = sqrt(dx*dx +dy*dy);
